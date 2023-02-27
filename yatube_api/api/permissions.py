@@ -1,5 +1,6 @@
 from rest_framework.permissions import BasePermission, SAFE_METHODS
 
+
 class IsAuthAuthor(BasePermission):
     """Пишем пользовательское разрешение."""
     def has_permission(self, request, view):
@@ -11,5 +12,3 @@ class IsAuthAuthor(BasePermission):
         if request.method in SAFE_METHODS:
             return True
         return obj.author == request.user
-
-#if request.method == 'GET' or request.method  == 'HEAD' or request.method  == 'OPTIONS':
