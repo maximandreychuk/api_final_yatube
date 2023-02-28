@@ -10,7 +10,7 @@ from .serializers import (
     FollowSerializer,
     GroupSerializer,
     PostSerializer,
-    )
+)  # если вплотную, то не проходят тесты
 
 
 class PostViewSet(viewsets.ModelViewSet):
