@@ -1,13 +1,16 @@
 from django.shortcuts import get_object_or_404
 from posts.models import Follow, Group, Post
-from rest_framework import filters, mixins, viewsets
+from rest_framework import filters, viewsets
 from rest_framework.permissions import IsAuthenticated
+from .mixins import CreateListViewSet
 from .pagination import CustomPaginate
 from .permissions import IsAuthAuthor
-from .serializers import (CommentSerializer,
-                          FollowSerializer,
-                          GroupSerializer,
-                          PostSerializer)
+from .serializers import (
+CommentSerializer,
+FollowSerializer,
+GroupSerializer,
+PostSerializer,
+)
 
 
 class PostViewSet(viewsets.ModelViewSet):
@@ -42,13 +45,6 @@ class CommentViewSet(viewsets.ModelViewSet):
                         post=post)
 
 
-class CreateListViewSet(mixins.CreateModelMixin,
-                        mixins.ListModelMixin,
-                        viewsets.GenericViewSet):
-    """Вьюсет для подписок. Запросы только GET и POST."""
-    pass
-
-
 class FollowViewSet(CreateListViewSet):
     serializer_class = FollowSerializer
     queryset = Follow.objects.all()
@@ -58,7 +54,7 @@ class FollowViewSet(CreateListViewSet):
     permission_classes = (IsAuthenticated,)
 
     def get_queryset(self):
-        return Follow.objects.filter(user=self.request.user)
+        return self.request.user.follower.all()
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)

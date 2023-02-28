@@ -73,6 +73,14 @@
 }
     Status: 201 Created
 
+## Использованные технологии
+```
+Django REST Framework.
+библиотека Simple JWT + Djoser
+библиотека django-filter 
+БД SQLite
+Система управления версиями - git
+```
     
 
     
