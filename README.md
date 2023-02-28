@@ -75,11 +75,11 @@
 
 ## Использованные технологии:
 ![Django Rest Framework](https://media.slid.es/uploads/708405/images/4005243/django_rest_500x500.png)
-#  Django REST Framework.
-# библиотека Simple JWT + Djoser
-# библиотека django-filter 
-# БД SQLite
-# Система управления версиями - Git
+* Django REST Framework. 
+* библиотека Simple JWT + Djoser
+* библиотека django-filter 
+* БД SQLite
+* Система управления версиями - Git
 
     
 
