@@ -1,6 +1,5 @@
-# api_final
+# api final yatube
 ![API YaTube](https://user-images.githubusercontent.com/59732804/112229268-b60dfe80-8c43-11eb-9bc9-a05a5e6ddbf0.png)
-### api final yatube
 
 ## Описание:
 Проект YaTube - это социальная сеть, функционал которой не отличается от привычных и известных нам аналогов. Создан в образовательных целях.
