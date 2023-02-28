@@ -1,4 +1,5 @@
 # api_final
+![API YaTube](https://user-images.githubusercontent.com/59732804/112229268-b60dfe80-8c43-11eb-9bc9-a05a5e6ddbf0.png)
 ### api final yatube
 
 ## Описание:
@@ -79,7 +80,6 @@
 * библиотека django-filter 
 * БД SQLite
 * Система управления версиями - Git
-
 ![Django Rest Framework](https://media.slid.es/uploads/708405/images/4005243/django_rest_500x500.png)
 
 
