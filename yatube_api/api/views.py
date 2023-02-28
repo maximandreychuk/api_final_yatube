@@ -6,11 +6,11 @@ from .mixins import CreateListViewSet
 from .pagination import CustomPaginate
 from .permissions import IsAuthAuthor
 from .serializers import (
-CommentSerializer,
-FollowSerializer,
-GroupSerializer,
-PostSerializer,
-)
+    CommentSerializer,
+    FollowSerializer,
+    GroupSerializer,
+    PostSerializer,
+    )
 
 
 class PostViewSet(viewsets.ModelViewSet):
